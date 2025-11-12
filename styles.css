@@ -1,0 +1,171 @@
+    /* Minimal, accessible, and portable styles */
+    :root {
+        --bg: #0f1221;
+        --panel: #171a2a;
+        --text: #e6e9f2;
+        --muted: #aab1c5;
+        --brand: #67c587;
+        /* organic prosperity */
+        --brand-2: #6aa7ff;
+        /* trust */
+        --border: #2a3047;
+        --focus: #ffd166;
+        /* visible focus */
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    a {
+        color: var(--brand-2);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    header {
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 16px;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+        margin: 0 0 6px;
+    }
+
+    header p {
+        margin: 4px 0 12px;
+        color: var(--muted);
+    }
+
+    .meta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 0.95rem;
+    }
+
+    .tag {
+        display: inline-block;
+        border: 1px solid var(--border);
+        background: var(--panel);
+        color: var(--muted);
+        padding: 2px 8px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+    }
+
+    nav {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 16px 0;
+    }
+
+    nav a {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 8px;
+        background: var(--panel);
+        border: 1px solid var(--border);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+        gap: 16px;
+        margin-top: 8px;
+    }
+
+    .card {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 14px;
+    }
+
+    .card h3 {
+        margin: 0 0 6px;
+        font-size: 1.05rem;
+    }
+
+    .card p {
+        margin: 6px 0 10px;
+        color: var(--muted);
+    }
+
+    .card .actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 7px 12px;
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        background: transparent;
+        color: var(--text);
+        cursor: pointer;
+    }
+
+    .btn.primary {
+        background: linear-gradient(135deg, var(--brand), var(--brand-2));
+        border: none;
+        color: #091021;
+    }
+
+    .section-title {
+        margin: 24px 0 8px;
+        font-size: 1.15rem;
+    }
+
+    footer {
+        margin-top: 28px;
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.95rem;
+    }
+
+    /* Accessible focus */
+    :focus-visible {
+        outline: 3px solid var(--focus);
+        outline-offset: 3px;
+        border-radius: 4px;
+    }
+
+    /* Print-safe */
+    @media print {
+
+        nav,
+        .btn {
+            display: none;
+        }
+    }
