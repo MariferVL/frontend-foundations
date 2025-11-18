@@ -40,9 +40,12 @@
                 <li><a href="#">Support</a></li>
             </ul>
         </nav>
+        <button class="btn-logout" type="button" aria-label="Cerrar sesión">Sign out</button>
     </header>
 
-    <main>
+    <main id="main">
+        <h1 class="visually-hidden">Client profile</h1>
+
         <!-- Profile hero -->
         <section class="profile-card" aria-label="Client profile summary">
             <img src="static/images/avatar/avatar-client3.png" alt="Profile photo of Luka Go client">
@@ -51,7 +54,7 @@
             <p class="location">📍 Viña del Mar, Chile</p>
             <p class="bio">UX/UI Designer · Frontend Developer · Nature lover</p>
             <p class="description">Passionate about crafting beautiful and functional digital experiences...</p>
-            <a href="#" class="edit-profile">Edit profile</a>
+            <button class="edit-profile" type="button" aria-label="Edit profile">Edit profile</button>
         </section>
 
         <!-- Products -->
@@ -68,66 +71,89 @@
         <section class="section" aria-labelledby="status-heading">
             <h3 id="status-heading">Account Status</h3>
             <ul>
-                <li>Available balance: $1,250,000 CLP</li>
-                <li>Active investments: $3,500,000 CLP</li>
-                <li>Next payment: Nov 25, 2025</li>
-            </ul>
-        </section>
-
-        <!-- Education -->
-        <section class="section" aria-labelledby="education-heading">
-            <h3 id="education-heading">Education</h3>
-            <ul>
-                <li>Coding Dojo – Full Stack Bootcamp</li>
-                <li>Dec 2019 – Mar 2020</li>
-                <li>Triple black belt in Python, MERN, and C#</li>
+                <li>
+                    <span class="label">Available balance:</span>
+                    <span class="value" aria-label="1,250,000 Chilean pesos">CLP 1,250,000</span>
+                </li>
+                <li>
+                    <span class="label">Active investments:</span>
+                    <span class="value" aria-label="3,500,000 Chilean pesos">CLP 3,500,000</span>
+                </li>
+                <li>
+                    <span class="label">Next payment:</span>
+                    <time datetime="2025-11-25">Nov 25, 2025</time>
+                </li>
             </ul>
         </section>
 
         <!-- Connection Requests -->
-        <section class="section" aria-labelledby="requests-heading">
+        <section class="section" aria-labelledby="requests-heading" role="region">
             <h3 id="requests-heading">Connection Requests</h3>
-            <ul class="connections">
+            <ul class="connections" role="list">
                 <li>
-                    <img src="static/images/avatar/avatar-client4.png" alt="Carlos M. profile photo">
+                    <img src="static/images/avatar/avatar-client4.png" alt="Profile photo of Javier M.">
                     <div>
                         <strong>Javier M.</strong><br>
                         <span>Fintech Product Manager</span>
+                        <div class="item-actions">
+                            <a href="#" class="link">View profile</a>
+                        </div>
                     </div>
-                    <button class="connect-btn">Accept</button>
+                    <div class="actions">
+                        <button class="connect-btn" type="button"
+                            aria-label="Accept request from Javier M.">Accept</button>
+                        <button class="decline-btn" type="button"
+                            aria-label="Decline request from Javier M.">Decline</button>
+                        <button class="icon-btn" type="button" aria-label="Dismiss request from Javier M.">×</button>
+                    </div>
                 </li>
+
                 <li>
-                    <img src="static/images/avatar/avatar-client2.png" alt="Fernanda V. profile photo">
+                    <img src="static/images/avatar/avatar-client2.png" alt="Profile photo of Fernanda V.">
                     <div>
                         <strong>Fernanda V.</strong><br>
                         <span>UX Researcher</span>
+                        <div class="item-actions">
+                            <a href="#" class="link">View profile</a>
+                        </div>
                     </div>
-                    <button class="connect-btn">Accept</button>
+                    <div class="actions">
+                        <button class="connect-btn" type="button"
+                            aria-label="Accept request from Fernanda V.">Accept</button>
+                        <button class="decline-btn" type="button"
+                            aria-label="Decline request from Fernanda V.">Decline</button>
+                        <button class="icon-btn" type="button" aria-label="Dismiss request from Fernanda V.">×</button>
+                    </div>
                 </li>
             </ul>
         </section>
 
         <!-- Trusted Network -->
-        <section class="section" aria-labelledby="network-heading">
+        <section class="section" aria-labelledby="network-heading" role="region">
             <h3 id="network-heading">Trusted Network</h3>
-            <ul class="network">
+            <ul class="network" role="list">
                 <li>
-                    <img src="static/images/avatar/avatar-client5.png" alt="Diego A. profile photo">
+                    <img src="static/images/avatar/avatar-client5.png" alt="Profile photo of Diego A.">
                     <div>
                         <strong>Diego A.</strong><br>
                         <span>Investment Advisor · Verified Partner</span>
+                        <div class="item-actions">
+                            <a href="#" class="link">View profile</a>
+                        </div>
                     </div>
                 </li>
                 <li>
-                    <img src="static/images/avatar/avatar-client1.png" alt="Camila T. profile photo">
+                    <img src="static/images/avatar/avatar-client1.png" alt="Profile photo of Camila T.">
                     <div>
                         <strong>Camila T.</strong><br>
                         <span>Legal Compliance · Internal Contact</span>
+                        <div class="item-actions">
+                            <a href="#" class="link">View profile</a>
+                        </div>
                     </div>
                 </li>
             </ul>
         </section>
-
     </main>
 
 </body>

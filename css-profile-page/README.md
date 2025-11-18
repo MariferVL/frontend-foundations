@@ -1,74 +1,85 @@
 # 📝 Profile Page — HTML & CSS Project
 
-Este proyecto implementa una **página de perfil fintech** para **Luka Go💰**, mostrando información del cliente, productos contratados y estado de cuenta. El diseño sigue principios de **mobile‑first**, **a11y** y **UX/UI premium**.
+This project implements a **fintech profile page** for **Luka Go💰**, displaying client information, active products, account status, and professional relationships. The design follows **mobile‑first**, **a11y**, and **premium UX/UI** principles.
 
 ---
 
-## 📚 Glosario de HTML
+## 📚 HTML Glossary
 
-### `<header>` y `<nav>`
-- **Propósito**: Barra de marca y navegación principal.  
-- **Uso**: Logo Luka Go + enlaces a secciones.
+### `<header>` and `<nav>`
+- **Purpose**: Brand bar and main navigation.  
+- **Usage**: Luka Go logo + navigation links + sign‑out button.
 
 ### `<main>`
-- **Propósito**: Contenedor semántico para contenido principal.  
-- **Uso**: Perfil, productos, estado de cuenta.
+- **Purpose**: Semantic container for primary content.  
+- **Usage**: Profile card, products, account status, connection requests, trusted network.
 
 ### `<section>`
-- **Propósito**: Agrupar bloques relacionados.  
-- **Uso**: Perfil del cliente, lista de productos, estado de cuenta.
+- **Purpose**: Group related content blocks.  
+- **Usage**: Client profile, product list, account status, requests, and network.
 
-### `<ul>` y `<li>`
-- **Propósito**: Listas semánticas.  
-- **Uso**: Productos activos y detalles financieros.
+### `<ul>` and `<li>`
+- **Purpose**: Semantic lists.  
+- **Usage**: Active products, financial details, pending requests, verified contacts.
+
+### `<time>` and `<span>`
+- **Purpose**: Semantic markup for dates and currency.  
+- **Usage**: Next payment date, CLP balances.
 
 ---
 
-## 🎨 Glosario de CSS
+## 🎨 CSS Glossary
 
-### Selectores
-- `.profile-card`, `.section`, `.profile img` → clases para modularidad.  
-- `header nav a:hover` → interacción visual.
+### Selectors
+- `.profile-card`, `.section`, `.connections`, `.network` → modular classes.  
+- `header nav a:hover` → interactive navigation styling.
 
 ### Box Model
-- `padding`, `border-radius`, `box-shadow` → tarjetas con aspecto premium.  
-- `border-top: 4px solid var(--gold)` → acento visual fintech.
+- `padding`, `border-radius`, `box-shadow` → premium card look.  
+- `.account-level` → gold badge with translucent background.  
+- `border-top: 4px solid var(--gold)` → fintech accent on sections.
 
 ### Display / Flex / Grid
-- `display: flex` en header → logo + nav equilibrados.  
-- `display: grid` en main → layout responsivo con `gap`.  
-- `place-items: center` en profile hero → centrado moderno.
+- `display: flex` in header → balanced logo + nav + logout.  
+- `display: grid` in main → responsive layout with `gap`.  
+- `place-items: center` in profile hero → modern centering.  
+- `flex` in lists → avatar + details + actions aligned.
 
-### Posiciones
-- `@media (max-width: 600px)` → reorganiza perfil en mobile.  
-- `justify-content: space-between` → balance en header.
+### Positioning
+- `@media (max-width: 600px)` → reorganizes profile for mobile.  
+- `justify-content: space-between` → balanced header layout.
 
 ### Extras
-- `clamp()` → tipografía fluida.  
-- `color-scheme: light dark` → soporte para modo oscuro.  
-- `transition` en nav links → micro‑interacciones.
+- `clamp()` → fluid typography.  
+- `color-scheme: light dark` → dark mode support.  
+- `transition` on buttons and links → micro‑interactions.  
+- `.visually-hidden` → accessible hidden headings.
 
 ---
 
-## 🔐 Accesibilidad & UX
+## 🔐 Accessibility & UX
 
-- `aria-label` y `aria-labelledby` → describen secciones para lectores de pantalla.  
-- Contraste alto: navy + gold.  
-- Navegación con hover claro → mejora usabilidad.  
-- Layout mobile‑first → experiencia consistente en todos los dispositivos.
-
----
-
-## 🚀 Prueba
-
-1. Abrir `index.html` en el navegador.  
-2. Revisar la barra de navegación y hover en enlaces.  
-3. Observar cómo se adaptan las secciones en pantallas pequeñas.  
-4. Explorar en DevTools el uso de `grid`, `flex` y `clamp()`.
+- `aria-label` and `aria-labelledby` → clear section descriptions for screen readers.  
+- High contrast palette: navy + gold + white.  
+- Clear hierarchy in profile card: name, badge, secondary info.  
+- Buttons (`Edit profile`, `Accept`, `Decline`, `Dismiss`) with hover and focus states.  
+- Semantic currency (`CLP`) and `<time>` for dates.  
+- Mobile‑first layout → consistent experience across devices.  
+- Empty state support for requests.
 
 ---
 
-## 🧠 Notas de Autor
+## 🚀 How to Test
 
-Este proyecto forma parte de [`frontend-foundations`](https://github.com/MariferVL/frontend-foundations), colección de microproyectos para repasar fundamentos de frontend con relevancia fintech.
+1. Open `index.html` in your browser.  
+2. Check the navigation bar, hover states, and sign‑out button.  
+3. Observe the profile card hierarchy (name, badge, bio).  
+4. Explore sections: products, account status, connection requests, trusted network.  
+5. Resize the window to see mobile responsiveness.  
+6. Use DevTools to inspect `grid`, `flex`, `clamp()`, and focus states.
 
+---
+
+## 🧠 Author Notes
+
+This project is part of the [`frontend-foundations`](https://github.com/MariferVL/frontend-foundations) repo — a curated collection of microprojects to review core frontend concepts with fintech relevance.
