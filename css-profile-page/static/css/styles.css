@@ -1,0 +1,125 @@
+:root {
+    --navy: #0A0A2A;
+    --gold: #C8B560;
+    --bg: #FFFFFF;
+    --radius: 1rem;
+    --shadow: 0 6px 24px rgba(0,0,0,0.12);
+    color-scheme: light dark;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--navy);
+}
+
+/* Header */
+header {
+    background: var(--navy);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+}
+
+header h1 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+}
+
+/* Navigation styling */
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;              
+    margin: 0;
+    padding: 0;
+}
+
+header nav a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.25rem 0;    
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+}
+
+header nav a:hover {
+    color: white;
+    border-bottom: 2px solid var(--gold); 
+}
+
+
+/* Main layout */
+main {
+    padding: 2rem;
+    max-width: 960px;
+    margin: auto;
+    display: grid;
+    gap: 2rem;
+}
+
+/* Profile hero card */
+.profile-card {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    display: grid;
+    place-items: center;
+    gap: 1rem;
+}
+
+.profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    object-fit: cover;
+}
+
+.profile-card h2 {
+    margin: 0;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+}
+
+.profile-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--gold);
+}
+
+/* Section cards */
+.section {
+    background: #F9FAFB;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--gold);
+}
+
+.section h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: var(--navy);
+}
+
+.section li {
+    margin-bottom: 0.5rem;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .profile-card {
+        padding: 1.5rem;
+    }
+    .profile-card img {
+        width: 96px;
+        height: 96px;
+    }
+}
