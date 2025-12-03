@@ -1,0 +1,316 @@
+/* Variables para mantener el diseño consistente */
+:root {
+    --color-green-primary: #5e9f45;
+    --color-green-dark: #89bb70;
+    --color-gray-bg: #f5f5f5;
+    --color-text-dark: #333;
+    --color-text-light: #666;
+}
+
+/* Estilos base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* ---------------------------------- */
+/*       Encabezado Superior          */
+/* ---------------------------------- */
+
+.app-header {
+    background-color: var(--color-green-dark);
+    color: white;
+    text-align: center;
+    padding: 0.3125rem 0;
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------- */
+/*        Barra de Navegación         */
+/* ---------------------------------- */
+
+.main-nav {
+    padding: 0.9375rem 0;
+    position: relative;
+    box-shadow: none;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav::after {
+    content: '';
+    display: block;
+    height: 0.0625rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    width: calc(100% - 2.5rem);
+    max-width: 75rem;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo-adopta {
+    color: #009510;
+}
+
+.logo-tu {
+    color: #aed29f;
+}
+
+.logo-arbol {
+    color: #88b96f;
+}
+
+.nav-buttons .btn {
+    padding: 0.625rem 1.25rem;
+    margin-left: 0.625rem;
+    border: none;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-adoptar {
+    background-color: #add29e;
+    color: var(--color-text-dark);
+}
+
+.btn-donar {
+    background-color: var(--color-green-primary);
+    color: white;
+}
+
+/* ------------------------------ */
+/*        Sección de Filtro       */
+/* ------------------------------ */
+
+.filter-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.875rem 0 1.25rem;
+}
+
+.filter-section h2 {
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    font-weight: 600;
+}
+
+.filter-section select {
+    padding: 0.5rem 0.9375rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: white;
+}
+
+/* --------------- */
+/*     Galería     */
+/* --------------- */
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.875rem;
+    margin-bottom: 3.125rem;
+    min-height: 25rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.mensaje-galeria-vacia {
+    width: 100%;
+    text-align: center;
+    padding: 3rem 0;
+    color: var(--color-text-light);
+}
+
+.card {
+    flex: 0 0 calc(50% - 1.875rem);
+    max-width: calc(50% - 1.875rem);
+    box-shadow: 0 0.0625rem 0.1875rem rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+}
+
+.card-image {
+    flex: 0 0 35%;
+    height: 9.375rem;
+    overflow: hidden;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3%;
+    margin: 0;
+}
+
+
+.card-content {
+    flex: 1;
+    padding: 0.9375rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    color: var(--color-text-dark);
+    font-size: 1.3rem;
+}
+
+.card-content p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+.btn-card {
+    align-self: flex-end;
+    padding: 0.5rem 0.9375rem;
+    border-radius: 0.25rem;
+    background-color: var(--color-green-dark);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 6.25rem;
+}
+
+/* Estilo para el botón Adoptado */
+.btn-card.adopted {
+    background-color: var(--color-gray-bg);
+    color: var(--color-text-light);
+    cursor: default;
+}
+
+
+/* ---------------- */
+/*     Footer       */
+/* ---------------- */
+
+.main-footer {
+    background-color: var(--color-green-dark);
+    color: white;
+    padding: 1.875rem 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 9.375rem;
+}
+
+.footer-section h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0.9375rem;
+}
+
+.footer-section address,
+.footer-section a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-style: normal;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    margin-bottom: 0.3125rem;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+/* Formulario de Suscripción */
+.subscribe-form {
+    display: flex;
+    margin-top: 0.625rem;
+}
+
+.subscribe-form input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem 0 0 0.25rem;
+    flex-grow: 1;
+}
+
+.subscribe-form .btn-enviar {
+    background-color: var(--color-green-primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 0.9375rem;
+    border-radius: 0 0.25rem 0.25rem 0;
+    cursor: pointer;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 48rem) {
+
+    .main-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-buttons {
+        margin-top: 0.625rem;
+    }
+
+    .gallery {
+        justify-content: center;
+    }
+
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .card-image {
+        flex: 0 0 40%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}

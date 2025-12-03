@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="María-Fernanda Villalobos López">
+    <title>AdoptaTuÁrbol</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="icon" type="image/x-icon" href="static/images/meta/favicon.ico">
+    
+</head>
+
+<body>
+    <header class="app-header">
+        <p>Tu plataforma favorita de adopción de árboles</p>
+    </header>
+
+    <nav class="main-nav">
+        <div class="container nav-content">
+            <div class="logo-container">
+                <h1 class="logo-title">
+                    <span class="logo-adopta">Adopta</span><span class="logo-tu">Tu</span><span
+                        class="logo-arbol">Árbol</span>
+                </h1>
+            </div>
+            <div class="nav-buttons">
+                <button class="btn btn-adoptar">Adoptar</button>
+                <button class="btn btn-donar" id="btn-donar">Donar</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="filter-section">
+            <h2>Mostrando: <span id="mostrar-titulo">Todos los Árboles</span></h2>
+            <select id="filtro-arboles" aria-label="Filtrar tipo de árboles">
+                <option value="todos">Todos los Árboles</option>
+                <option value="frutales">Árboles Frutales</option>
+                <option value="flores">Árboles de Flores</option>
+                <option value="ornamentales">Árboles Ornamentales</option>
+            </select>
+        </section>
+
+        <section id="galeria" class="gallery">
+            <div id="mensaje-vacio" class="mensaje-galeria-vacia hidden" aria-live="polite">
+                <h2>No se encontraron árboles de este tipo. 🌳 Prueba con otro filtro.</h2>
+            </div>
+
+            <article class="card" data-tipo="ornamentales" data-id="alamo" aria-labelledby="titulo-alamo">
+                <figure class="card-image">
+                    <img src="static/images/arboles/alamo.jpg" alt="Álamo">
+                </figure>
+                <div class="card-content">
+                    <h3 id="titulo-alamo">Álamo</h3>
+                    <p>Árbol caducifolio, de hojas anchas y con largos pecíolos.</p>
+                    <button class="btn btn-card btn-adoptar-card" aria-pressed="false">Adoptar</button>
+                </div>
+            </article>
+
+            <article class="card" data-tipo="ornamentales" data-id="fresno" aria-labelledby="titulo-fresno">
+                <figure class="card-image">
+                    <img src="static/images/arboles/fresno.jpg" alt="Fresno">
+                </figure>
+                <div class="card-content">
+                    <h3 id="titulo-fresno">Fresno</h3>
+                    <p>Árbol con tronco recto y cilíndrico, con amplia copa.</p>
+                    <button class="btn btn-card btn-adoptar-card" aria-pressed="false">Adoptar</button>
+                </div>
+            </article>
+
+            <article class="card" data-tipo="ornamentales" data-id="pino" aria-labelledby="titulo-pino">
+                <figure class="card-image">
+                    <img src="static/images/arboles/pino.jpg" alt="Pino">
+                </figure>
+                <div class="card-content">
+                    <h3 id="titulo-pino">Pino</h3>
+                    <p>Árbol de la familia de las abietáceas, de tronco elevado, recto.</p>
+                    <button class="btn btn-card btn-adoptar-card" aria-pressed="false">Adoptar</button>
+                </div>
+            </article>
+
+            <article class="card" data-tipo="flores" data-id="jacaranda" aria-labelledby="titulo-jacaranda">
+                <figure class="card-image">
+                    <img src="static/images/arboles/jacaranda.jpg" alt="Jacaranda">
+                </figure>
+                <div class="card-content">
+                    <h3 id="titulo-jacaranda">Jacaranda</h3>
+                    <p>Árbol de copa extendida y redondeada con flores moradas.</p>
+                    <button class="btn btn-card btn-adoptar-card" aria-pressed="false">Adoptar</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <section class="footer-section contact-info">
+                <h4>Contáctanos</h4>
+                <address>
+                    Av. Principal #123<br>
+                    Ciudad Palma, 10000<br>
+                    Chile
+                </address>
+            </section>
+
+            <section class="footer-section footer-links">
+                <a href="#">Inicio</a>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Adopta un Árbol</a>
+            </section>
+
+            <section class="footer-section footer-links">
+                <a href="#">Contacto</a>
+                <a href="#">Patrocinadores</a>
+                <a href="#">Proyectos</a>
+            </section>
+
+            <section class="footer-section subscribe">
+                <h4>Suscríbete</h4>
+                <form class="subscribe-form" novalidate>
+                    <input type="email" placeholder="usuario@correo.com" aria-label="Correo de suscripción">
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </form>
+            </section>
+        </div>
+    </footer>
+
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
