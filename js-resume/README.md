@@ -1,4 +1,4 @@
-# Interactive Resume (js-resume)
+# Interactive Resume
 
 This project is an interactive resume built with **HTML, CSS, Bootstrap, JavaScript, and jQuery**.  
 It demonstrates responsive design principles, accessibility (a11y), and user experience (UX/UI) practices.  
